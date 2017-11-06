@@ -4,5 +4,10 @@
   "main": "index.js",
   "repository": "https://github.com/Sharonsyra/news-api.git",
   "author": "Sharonsyra <sharonwaithii@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "path": "^0.12.7",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
 }
