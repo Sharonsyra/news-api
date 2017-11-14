@@ -1,5 +1,6 @@
 import React from 'react';
- 
+import WalletActions from '../actions/walletActions';
+
 class AddNewItem extends React.Component {
  
     // Set the initial state.
@@ -37,9 +38,13 @@ class AddNewItem extends React.Component {
  
     // Add a new item.
     _addNewItem(event) {
-        // ...
-    }
- 
+        event.preventDefault();
+        this.state.item.description = this.state.item.description || '-';
+        this.state.item.amount = this.state.item.amount || '0';
+        WalletActions.addNewItem(this.state.item);
+        this.setState({ item : this._getFreshItem() });
+    }    
+
     render() {
         return (
             <div>
